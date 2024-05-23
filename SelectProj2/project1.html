@@ -1,0 +1,556 @@
+ <html>
+  <head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+nav {
+  display: block;
+  background: #E95546;
+}
+
+.menu { display: block; }
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+}
+
+.menu li:first-child { margin-left: 0; }
+
+.menu li a {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 20px 15px;
+  display: block;
+  color: black;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.menu li a:hover,
+.menu li:hover>a {
+  color: red;
+}
+
+.menu ul {
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  width: 170px;
+  position: absolute;
+  left: 0px;
+  background: #fff;
+  z-index: 99;
+  transform: translate(0, 20px);
+  transition: all 0.2s ease-out;
+}
+
+.menu ul:after {
+  bottom: 100%;
+  left: 20%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.menu ul li {
+  display: block;
+  float: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  color: #797979;
+  background: #fff;
+}
+
+.menu ul li a:hover,
+.menu ul li:hover>a {
+  background: #FC6D58;
+  color: #fff;
+}
+
+.menu li:hover>ul {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.menu ul ul {
+  left: 169px;
+  top: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(20px, 20px);
+  transition: all 0.2s ease-out;
+}
+
+.menu ul ul:after {
+  left: -6px;
+  top: 10%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #fff;
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.menu li>ul ul:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.responsive-menu {
+  display: none;
+  width: 100%;
+  padding: 20px 15px;
+  background: #E95546;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.responsive-menu:hover {
+  background: #E95546;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+ 
+a.homer { background: white; }
+ @media (min-width: 768px) and (max-width: 979px) {
+
+.mainWrap { width: 768px; }
+
+.menu ul { top: 37px; }
+
+.menu li a { font-size: 12px; }
+
+a.homer { background: #E95546; }
+}
+ @media (max-width: 767px) {
+
+.mainWrap {
+  width: auto;
+  padding: 50px 20px;
+}
+
+.menu { display: none; }
+
+.responsive-menu { display: block; }
+
+nav {
+  margin: 0;
+  background: none;
+}
+
+.menu li {
+  display: block;
+  margin: 0;
+}
+
+.menu li a {
+  background: #fff;
+  color: #797979;
+}
+
+.menu li a:hover,
+.menu li:hover>a {
+  background: #FC6D58 ;
+  color: #fff;
+}
+
+.menu ul {
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: initial;
+}
+
+.menu li:hover>ul {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  transform: initial;
+}
+
+.menu ul ul {
+  left: 0;
+  transform: initial;
+}
+
+.menu li>ul ul:hover { transform: initial; }
+}
+
+  .h{
+      padding-left: 60px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+  }
+  .p
+  {
+      padding-left: 15%;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+  }
+  .txt
+  {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+  }
+  .tx
+  {
+     color:red; 
+	 font-size:18px;
+	 text-align:center;
+	 font-weight:bold;
+  }
+  
+  </style>
+  
+  <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+  
+  </head>
+  <body>
+  <div class="container-fluid">
+     <div class="row">
+	   <div class="col-md-12" style="background-color:navy">
+	   <h5 style="padding-left:100px;color:white"><span class="glyphicon glyphicon-envelope"></span> &nbsp E-mail:info@shineskill.com 
+	   <span style="padding-left:30px"><span class="glyphicon glyphicon-time"></span> &nbsp Hours:Mon-Fri:8.00am-7.00pm</span>
+	   <span style="padding-right:60px;float:right"> <span class="glyphicon glyphicon-earphone"></span> &nbsp Phone no.-9798158723 &nbsp &nbsp 
+       <span class="fa fa-facebook-f"></span>&nbsp &nbsp
+	   <span class="glyphicon glyphicon-play-circle"></span></h5>
+	   </div>
+	 </div>
+   </div>	 
+
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-md-3" style="padding:18px;height:80px">
+	   <center><img src="logo-dark.png" style="padding-left:40px;height:40px;"></center>
+     </div>
+	 
+    <div class="col-md-7" style="padding:18px;height:80px">
+  <ul class="menu">
+    <li><a href="#">HOME</a></li>
+    <li><a class="homer" href="#" >COURSES</a>
+      <ul class="sub-menu">
+        <li><a href="#">PROGRAMMING LANGUAGE</a></li>
+        <li><a href="#">WEB TECHNOLOGIES</a></li>
+        <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+      </ul>
+    </li>
+	<li><a class="homer" href="#">PROJECT TRAINING</a>
+      <ul class="sub-menu">
+        <li><a href="#">LIVE PROJECT TRAINING</a></li>
+        <li><a href="#">ACADEMIC PROJECT TRAINING</a></li>
+      </ul>
+    </li>					
+	<li><a class="homer" href="#">SERVICES</a>
+      <ul class="sub-menu">
+        <li><a href="#">CLASSROOM TRAINING</a></li>
+        <li><a href="#">ONLINE TRAINING</a></li>
+		 <li><a href="#">WEEKEND TRAINING</a></li>
+      </ul>
+    </li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+       </div>
+
+       <div class="col-md-2" style="padding:8px;height:80px">
+       <ul class="pagination">
+         <li><a href="#" style="color:red;outline-style:solid;outline-color:red;"><b>JOIN ONLINE CLASS</b></a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cotainer-fluid">    
+     <div class="row">
+      <div class="col-md-12">
+        <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/a.jpg" alt="a" title="a" id="wows1_0"/></li>
+		<li><img src="data1/images/b.jpg" alt="b" title="b" id="wows1_1"/></li>
+		<li><a href="http://wowslider.com"><img src="data1/images/c.jpg" alt="jquery slider" title="c" id="wows1_2"/></a></li>
+		<li><img src="data1/images/d.jpg" alt="d" title="d" id="wows1_3"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="a"><span><img src="data1/tooltips/a.jpg" alt="a"/>1</span></a>
+		<a href="#" title="b"><span><img src="data1/tooltips/b.jpg" alt="b"/>2</span></a>
+		<a href="#" title="c"><span><img src="data1/tooltips/c.jpg" alt="c"/>3</span></a>
+		<a href="#" title="d"><span><img src="data1/tooltips/d.jpg" alt="d"/>4</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com/vi">css slider</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+      </div>
+    </div>
+   </div>	
+  
+  <div class="cotainer-fluid">
+   <div class="row" style="background-color: rgb(252, 40, 40);">
+   <div class="col-md-2"></div>
+
+   <div class="col-md-2" style="background-color:red;">
+    <br><h6 style="font-size:30px;color:white;text-align: center;">
+   <span class="glyphicon glyphicon-home"><br>
+   CLASSROOM TRAINING</h6>
+   </span><br>
+  </div>
+
+  <div class="col-md-2" style="background-color:red;">
+  <br><h6 style="font-size:30px;color:white;text-align: center;">
+   <span class="glyphicon glyphicon-globe"><br>
+   ONLINE TRAINING</h6>
+   </span><br>
+  </div>
+
+  <div class="col-md-2" style="background-color:red;">
+    <br><h6 style="font-size:30px;color:white;text-align: center;">
+     <span class="glyphicon glyphicon-thumbs-up"><br>
+     LIVE TRAINING</h6>
+     </span><br>
+    </div>
+
+    <div class="col-md-2" style="background-color:red;">
+      <br><h6 style="font-size:30px;color:white;text-align: center;">
+       <span class="glyphicon glyphicon-education"><br>
+       PROJECT TRAINING</h6>
+       </span><br>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+  </div>	  
+
+     <br><br><br><br>
+     <div class="container">
+	       <div class="row">
+		        <div class="col-md-8">
+			    <span class="tx"><center>POPULAR COURSES</center>
+				</span> 
+			  </div>
+			  <div class="col-md-4">
+			     <span class="tx"><center><u>Join FREE 1 hour Trial Class</u></center></span>  
+			  </div>
+			  <br><br><br><br>
+		      <div class="col-md-8">
+			    
+				 <div class="row" >
+				    <div class="col-md-4">
+					   <img src="python.png" style="border:double;color:blue">
+					</div>
+					
+					<div class="col-md-4">
+					   <img src="php.png" style="border:double;color:blue">
+					</div>
+					
+					<div class="col-md-4">
+					   <img src="web.png" style="border:double;color:blue">
+					</div>
+	
+				 </div>
+				 
+				 <div class="row" style="margin-top:20px">
+				    <div class="col-md-4">
+					   <img src="c.png" style="border:double;color:blue">
+					</div>
+					
+					<div class="col-md-4">
+					   <img src="c++.png" style="border:double;color:blue">
+					</div>
+					
+					<div class="col-md-4">
+					   <img src="java.png" style="border:double;color:blue">
+					</div>
+	
+				 </div>
+				    
+			  </div>
+			  <div class="col-md-4 p-2 shadow p-3 mb-5  rounded" style="padding:50px;box-shadow:5px 5px 15px;">
+			         <h2><b><center>Join Now</center></b></h2>  
+			         Name*<br><input type="text" class="form-control">
+                     E-mail*<br><input type="text" class="form-control">
+                     Phone*<br><input type="text" class="form-control">
+                     <br><select class="form-control">
+					                  <option>Select Courses</option>
+									  <option>C PROGRAMMING</option>
+									  <option>C++ PROGRAMMING</option>
+									  <option>WEB TECHNOLOGY</option>
+									  <option>PHP & MySQL</option>
+					                  </select><br>			   
+			         <button type="button" class="btn-danger btn-sm" style="width:300px;height:60px"><h4>Sumbit Now</h4></button>
+			  </div>
+		   </div>
+		</div>   
+		
+		<div class="row">
+          <br><br><br><br><br><br>
+          <div class="col md-12">
+            <center><span style="font-size: 30px;font-weight: bold;">Class By Shankar Sir</span></center>
+          </div>
+        </div>
+		
+        <div class="row">
+          <br><br><br>
+          <div class="col-md-6">
+            <span style="font-size: 20px;padding-left: 260px;">About PHP</span><br><br>
+            <span class="h">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qj8zVAcfxYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </span>  
+          </div>
+          <div class="col-md-6">
+            <span style="font-size: 20px;padding-left: 250px;">About Web Development</span><br><br>
+            <span class="h">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Umlv2gqt0Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </span>
+          </div>
+        </div>
+		  
+		<div class="row">
+          <br><br><br>
+          <div class="col-md-6">
+            <span style="font-size: 20px;padding-left: 260px;">About C</span><br><br>
+            <span class="h">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VHngvPlA_WM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </span>  
+          </div>
+          <div class="col-md-6">
+            <span style="font-size: 20px;padding-left: 250px;">Condition Statement</span><br><br>
+            <span class="h">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UlTX6a4usIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </span>
+          </div>
+        </div>
+		  
+		<div class="row">
+            <br><br><br><br>
+            <div class="col-md-12" style="background-color: whitesmoke">
+              <br><br><br><br>
+              <center><span style="font-size: 35px;font-weight: bold;">Our Successful Students.....And Many More</span></center>
+              <br><br><br><br>
+              <span class="h"><img src="team1.png" height="30%" width="15%" class="img-rounded" style="border:1px solid rgb(128, 191, 243);"></span>
+              <span class="h"><img src="team2.png" height="30%" width="15%" class="img-rounded" style="border:1px solid rgb(128, 191, 243);"></span>
+              <span class="h"><img src="team3.png" height="30%" width="15%" class="img-rounded" style="border:1px solid rgb(128, 191, 243);"></span>
+              <span class="h"><img src="team4.png" height="30%" width="15%" class="img-rounded" style="border:1px solid rgb(128, 191, 243);"></span>
+              <p>
+                <span class="p" style="padding-left: 75px;"><bold>Pratap Kumar Sen</bold></span>
+                <span class="p" style="padding-left: 100px;"><bold>Annchal Kumari</bold></span>
+                <span class="p" style="padding-left: 120px;"><bold>Avinash Singh</bold></span>
+                <span class="p" style="padding-left: 120px;"><bold>Abhay Thakur</bold></span>
+              </p>
+            </div>
+        </div>
+	
+	<div class="container-fluid">		
+	    <div class="row">
+           <br><br><br><br>
+           <div class="col-md-12" style="background-color: rgb(15, 15, 94);">
+           <br><br><br><br>
+           <center><span style="font-size: 30px;font-weight: bold;color:white;">Our Student are working in more than 50+ companies</span></center>
+           <br><br>
+           <span class="h"><img src="t1.png" height="30%" width="15%" class="img-circle" style="border:10px solid whitesmoke;"></span>
+           <span class="h"><img src="t2.jpg" height="30%" width="15%" class="img-circle" style="border:10px solid whitesmoke;"></span>
+           <span class="h"><img src="t3.png" height="30%" width="15%" class="img-circle" style="border:10px solid whitesmoke;"></span>
+           <span class="h"><img src="t4.png" height="30%" width="15%" class="img-circle" style="border:10px solid whitesmoke;"></span>
+           <br><br><br><br>
+          </div>
+          <br><br><br><br>
+		  
+		    <div class="col-md-12" style="background-color: rgb(15, 15, 94);">
+            <img src="c2.png"  width="100%" height="80%"></img>
+            <br><br><br><br><br><br>
+            </div>
+		</div>	
+	</div>
+	
+	<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6" style="background-color:rgb(15, 15, 94);height:450px">
+                &nbsp &nbsp &nbsp &nbsp
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.2558018165505!2d85.32284221497439!3d23.378961584773748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1171a149375%3A0x18cd6e4aa37e14ee!2sSHINE%20SKILL%3A-%20C%2C%20C%2B%2B%2C%20JAVA%2C%20PYTHON%2C%20PHP%2C%20ANDROID%20%2CPROJECT%20TRAINING%2C%20BEST%20PROGRAMMING%20INSTITUTE%20%2C%20BCA%2C%20MCA%20%2C%20B-TECH%20IN%20RANCHI!5e0!3m2!1sen!2sin!4v1621236111431!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <br><br>
+            </div>
+
+            <div class="col-md-2" style="background-color: rgb(15, 15, 94);height:450px">
+              <span style="color:white;font-weight:bold;font-size: 25px;">
+                Quick Links
+              </span><br>
+			  <img src="hr.png" style="height:5px">
+              <br><br>
+              <a href="#" style="color:gray;font-size:20px">Home</a><br><br>
+               <a href="#" style="color:gray;font-size:20px">C Programming</a><br><br>
+                <a href="#" style="color:gray;font-size:20px">PHP & MySQL</a><br><br>
+                 <a href="#" style="color:gray;font-size:20px">Today Offer</a><br><br>
+                  <a href="#" style="color:gray;font-size:20px">Project Training</a><br><br><br><br><br>
+            </div> 
+			
+			<div class="col-md-4" style="background-color: rgb(15, 15, 94);height:450px">
+              <span style="color:white;font-size: 25px;">
+                Contact Information
+              </span>
+              <br><br><br>
+              <h5 style="color:white;font-weight: bold;">
+                <span class="glyphicon glyphicon-map-marker"></span>&nbsp &nbsp
+                Branch 1<br><br>&nbsp &nbsp &nbspDeputy Para Kutchery Chowk Ranchi<br><br><br>
+                  <span class="glyphicon glyphicon-earphone"></span>&nbsp &nbsp
+                +91-9798158723<br><br>&nbsp &nbsp &nbsp+91-8252451404<br><br><br>
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp &nbsp
+                info@shineskill.com<br><br>&nbsp &nbsp &nbspdirector@shineskill.com
+                </h5><br><br><br><br>
+            </div> 
+        </div>
+    </div>		
+	
+	<div class="container-fluid">
+         <div class="row">	
+	        <div class="col-md-12" style="background-color: rgb(15, 15, 94);text-align: center;height:120px">
+              <hr><br>
+                <big><span style="color:white">Copyright &copy 2020 Shineskill Software Ltd. by <a href="#" style="color:white">Shineskill Software Ltd.</a> All Rights Reserved</span></big>
+              <br><br><br>
+            </div>
+	    </div>	
+	</div>
+   </body>
+</html> 
